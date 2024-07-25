@@ -22,7 +22,7 @@ theme.font          = "sans 12"
 
 theme.bg_normal     = "#222222"
 theme.bg_focus      = colors.green
-theme.bg_urgent     = "#cc231c"
+theme.bg_urgent     = colors.red
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
 
