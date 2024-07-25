@@ -1,7 +1,3 @@
----------------------------
--- Default awesome theme --
----------------------------
-
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
@@ -10,14 +6,23 @@ local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
 local theme = {}
 
+-- set theme colors
+local colors = {}
+
+colors.green        = "#689d69"
+colors.red          = "#cc231c"
+colors.blue         = "#458587"
+colors.yellow       = "#d79922"
+colors.background   = "#282828"
+
 theme.dir = os.getenv("HOME") .. "/.config/awesome/themes/default"
 theme.wallpaper = theme.dir .. "/wallpaper.jpg"
 
 theme.font          = "sans 12"
 
 theme.bg_normal     = "#222222"
-theme.bg_focus      = "#689d69"
-theme.bg_urgent     = "#ff0000"
+theme.bg_focus      = colors.green
+theme.bg_urgent     = "#cc231c"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
 
@@ -27,9 +32,9 @@ theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap   = dpi(5)
-theme.border_width  = dpi(0)
-theme.border_normal = "#000000"
-theme.border_focus  = "#535d6c"
+theme.border_width  = dpi(4)
+theme.border_normal = "#535d6c"
+theme.border_focus  = "#689d69"
 theme.border_marked = "#91231c"
 
 -- There are other variable sets
@@ -42,7 +47,7 @@ theme.border_marked = "#91231c"
 -- mouse_finder_[color|timeout|animate_timeout|radius|factor]
 -- prompt_[fg|bg|fg_cursor|bg_cursor|font]
 -- hotkeys_[bg|fg|border_width|border_color|shape|opacity|modifiers_fg|label_bg|label_fg|group_margin|font|description_font]
-theme.taglist_bg_occupied = "#458587"
+theme.taglist_bg_occupied = colors.blue
 
 -- Generate taglist squares:
 --local taglist_square_size = dpi(10)
