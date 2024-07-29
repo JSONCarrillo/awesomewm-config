@@ -500,7 +500,7 @@ awful.rules.rules = {
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
     { rule = { class = "firefox-bin" },
-        properties = { screen = 2, tag = "2" } },
+        properties = { screen = 2, tag = "Internet" } },
 }
 -- }}}
 
